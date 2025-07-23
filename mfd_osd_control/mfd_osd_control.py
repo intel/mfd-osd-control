@@ -241,6 +241,8 @@ class OsdController:
             params["refresh_mode"] = refresh.value
         if description:
             params["description"] = description
+        if active_boot_type is not None:
+            params["active_boot_type"] = active_boot_type.value
 
         logger.log(
             log_levels.MODULE_DEBUG,
