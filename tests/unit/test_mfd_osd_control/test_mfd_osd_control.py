@@ -16,9 +16,7 @@ from mfd_typing import MACAddress
 class TestMfdOsdControl:
     @pytest.fixture()
     def controller(self, get_mock):
-        return OsdController(
-            base_url="osd.com", username="user", password="pass", secured=False, proxies=None
-        )
+        return OsdController(base_url="osd.com", username="user", password="pass", secured=False, proxies=None)
 
     @pytest.fixture()
     def get_mock(self, mocker):

@@ -124,9 +124,7 @@ class OsdController:
         mac = self._normalize_mac(mac)
         correct_status_codes = {HTTPStatus.OK: True, HTTPStatus.NOT_FOUND: False}
         get_host_details_url = f"{self._api_url}host/{mac}"
-        logger.log(
-            log_levels.MODULE_DEBUG, msg=f"Sending GET request to OSD {self._api_url} for host information."
-        )
+        logger.log(log_levels.MODULE_DEBUG, msg=f"Sending GET request to OSD {self._api_url} for host information.")
         response = requests.get(get_host_details_url, auth=self._auth_details, proxies=self.proxies, verify=self.verify)
         if response.status_code in correct_status_codes:
             return correct_status_codes.get(response.status_code)
