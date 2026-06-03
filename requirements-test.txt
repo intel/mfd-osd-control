@@ -5,4 +5,4 @@ pytest-mock ~= 3.14
 
 coverage ~= 7.3.0
 
-mfd_typing >= 1.23.0, <2
+mfd_typing >= 1.25.0, < 2
